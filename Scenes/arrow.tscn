@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bxcki5warki2j"]
+
+[ext_resource type="Script" uid="uid://camq6hw4s6563" path="res://arrow.gd" id="1_h5x2m"]
+[ext_resource type="Texture2D" uid="uid://bql78x4ybxuyo" path="res://assets/images/seta.png" id="2_40cdi"]
+
+[node name="Arrow" type="Node2D" unique_id=813468880]
+script = ExtResource("1_h5x2m")
+
+[node name="Seta" type="Sprite2D" parent="." unique_id=1675638558]
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_40cdi")
+
+[node name="Button" type="Button" parent="." unique_id=2144456730]
+modulate = Color(0, 0, 0, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

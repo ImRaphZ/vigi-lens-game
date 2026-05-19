@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c4ch661rm71fq"]
+
+[ext_resource type="Script" uid="uid://bcxjwfsdgdc0g" path="res://animation_player.gd" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dnaftoqd4uh08" path="res://assets/images/parte1.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://dnls5lmuu1r2s" path="res://assets/images/parte3.png" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://dfx7u82snqf0l" path="res://assets/images/parte2.png" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="5_7jktm"]
+
+[sub_resource type="Animation" id="Animation_feb5d"]
+resource_name = "Comic"
+length = 12.0
+
+[sub_resource type="Animation" id="Animation_fc0e3"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7jktm"]
+_data = {
+&"Comic": SubResource("Animation_feb5d"),
+&"RESET": SubResource("Animation_fc0e3")
+}
+
+[node name="Game" type="Node2D" unique_id=1346341802]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1655453861]
+libraries/ = SubResource("AnimationLibrary_7jktm")
+script = ExtResource("1_e2o6t")
+
+[node name="Parte1" type="Sprite2D" parent="." unique_id=1849971536]
+position = Vector2(576, 324)
+scale = Vector2(0.512963, 0.51296294)
+texture = ExtResource("3_feb5d")
+
+[node name="Parte2" type="Sprite2D" parent="." unique_id=1025086951]
+position = Vector2(1996, 324.00003)
+scale = Vector2(0.513, 0.513)
+texture = ExtResource("4_fc0e3")
+
+[node name="Parte3" type="Sprite2D" parent="." unique_id=1771387611]
+position = Vector2(570, 1072)
+scale = Vector2(0.513, 0.513)
+texture = ExtResource("4_7jktm")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("5_7jktm")]
+position = Vector2(993, 307)
+direction = 1
+size = 0
+newScene = "Right Small"
+
+[node name="Arrow2" parent="." unique_id=1506568758 instance=ExtResource("5_7jktm")]
+position = Vector2(574, 558)
+newScene = "Bottom Medium"
+
+[node name="Arrow3" parent="." unique_id=1944463554 instance=ExtResource("5_7jktm")]
+position = Vector2(138, 322)
+direction = 3
+newScene = "Left Medium"
+
+[node name="Arrow4" parent="." unique_id=27137777 instance=ExtResource("5_7jktm")]
+position = Vector2(572, 105)
+direction = 2
+size = 2
+newScene = "Top Large"
