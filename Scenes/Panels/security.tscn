@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://7cepolh72xl3"]
+
+[ext_resource type="Texture2D" uid="uid://dtq7skreodbu7" path="res://assets/images/parte19.png" id="1_tfad7"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_hw6jf"]
+
+[node name="Security" type="Node2D" unique_id=1326719708]
+
+[node name="Parte19" type="Sprite2D" parent="." unique_id=950159417]
+position = Vector2(563, 339)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tfad7")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_hw6jf")]
+position = Vector2(562, 508)
+newScene = "FinalHall"

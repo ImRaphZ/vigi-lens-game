@@ -5,6 +5,29 @@
 [ext_resource type="PackedScene" uid="uid://cir6cgvcahmqg" path="res://Scenes/Panels/introduction.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://brbva18mfd6qg" path="res://Scenes/Panels/hallway.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://5lj2oe35cfhn" path="res://Scenes/Panels/vents.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://b51oghknafeqj" path="res://Scenes/Panels/main_hall.tscn" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://ca4yjrknka0gv" path="res://Scenes/Panels/boss.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://dgpqgrxao422o" path="res://Scenes/Panels/second_hall.tscn" id="7_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://ce1h6rs5bxfl0" path="res://Scenes/Panels/boss_cabinet.tscn" id="9_vef74"]
+[ext_resource type="PackedScene" uid="uid://bv74d4gujuj17" path="res://Scenes/Panels/final_hall.tscn" id="10_hve3p"]
+[ext_resource type="PackedScene" uid="uid://7cepolh72xl3" path="res://Scenes/Panels/security.tscn" id="11_iotsf"]
+[ext_resource type="PackedScene" uid="uid://cnk8u5ls3ojo6" path="res://Scenes/Panels/ran_d.tscn" id="12_lc2xo"]
+
+[sub_resource type="Animation" id="Animation_hve3p"]
+resource_name = "Boss"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boss:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-12, -2), Vector2(-12, -714)]
+}
 
 [sub_resource type="Animation" id="Animation_feb5d"]
 resource_name = "Comic"
@@ -24,6 +47,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 2.2973945, 0.07432574, 2.3784142, 1, 2.0705302, 1, 1.6817936, 1, 2.5491211, 1),
 "update": 0,
 "values": [Vector2(-385, -230), Vector2(-385, -230), Vector2(-1786, -432), Vector2(-1786, -432), Vector2(-411, -1088), Vector2(-411, -1088), Vector2(-1786, -1513), Vector2(-1786, -1513), Vector2(-375, -2089), Vector2(-375, -2089), Vector2(-1796, -2608)]
+}
+
+[sub_resource type="Animation" id="Animation_eow3j"]
+resource_name = "MainHall"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainHall:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.96666664, 2.5),
+"transitions": PackedFloat32Array(1.6817933, 1),
+"update": 0,
+"values": [Vector2(-27, 5), Vector2(-1131.41, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_fc0e3"]
@@ -52,6 +91,58 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(18, -3)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainHall:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-27, 5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Boss:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-12, -2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RanD:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-19, -11)]
+}
+
+[sub_resource type="Animation" id="Animation_iotsf"]
+resource_name = "RAND"
+length = 2.5333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RanD:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-19, -11), Vector2(-1133.965, -11)]
+}
 
 [sub_resource type="Animation" id="Animation_ryrav"]
 resource_name = "Vents"
@@ -71,9 +162,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7jktm"]
 _data = {
+&"Boss": SubResource("Animation_hve3p"),
 &"Comic": SubResource("Animation_feb5d"),
 &"Introduction": SubResource("Animation_7jktm"),
+&"MainHall": SubResource("Animation_eow3j"),
 &"RESET": SubResource("Animation_fc0e3"),
+&"RanD": SubResource("Animation_iotsf"),
 &"Vents": SubResource("Animation_ryrav")
 }
 
@@ -99,5 +193,32 @@ visible = false
 [node name="Vents" parent="." unique_id=899346641 instance=ExtResource("5_7jktm")]
 visible = false
 position = Vector2(18, -3)
+
+[node name="MainHall" parent="." unique_id=1034500612 instance=ExtResource("6_ryrav")]
+visible = false
+position = Vector2(-27, 5)
+
+[node name="SecondHall" parent="." unique_id=2065551815 instance=ExtResource("7_j5wjh")]
+visible = false
+
+[node name="Boss" parent="." unique_id=661360774 instance=ExtResource("7_eow3j")]
+visible = false
+position = Vector2(-12, -2)
+
+[node name="BossCabinet" parent="." unique_id=1912630456 instance=ExtResource("9_vef74")]
+visible = false
+position = Vector2(2, -2)
+
+[node name="FinalHall" parent="." unique_id=145231064 instance=ExtResource("10_hve3p")]
+visible = false
+position = Vector2(-10, -4)
+
+[node name="Security" parent="." unique_id=1326719708 instance=ExtResource("11_iotsf")]
+visible = false
+position = Vector2(1, -14)
+
+[node name="RanD" parent="." unique_id=2067290288 instance=ExtResource("12_lc2xo")]
+visible = false
+position = Vector2(-19, -11)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

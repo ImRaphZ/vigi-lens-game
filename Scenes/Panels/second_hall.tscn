@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dgpqgrxao422o"]
+
+[ext_resource type="Texture2D" uid="uid://tmfm4jw5fnqw" path="res://assets/images/parte14.png" id="1_2rawi"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="3_y11di"]
+
+[node name="SecondHall" type="Node2D" unique_id=1034500612]
+
+[node name="Parte14" type="Sprite2D" parent="." unique_id=813313606]
+position = Vector2(581, 332)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2rawi")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("3_y11di")]
+position = Vector2(591, 429)
+direction = 2
+size = 0
+newScene = "BossCabinet"
+
+[node name="Arrow2" parent="." unique_id=1210493854 instance=ExtResource("3_y11di")]
+position = Vector2(680, 352)
+direction = 1
+size = 0
+newScene = "FinalHall"

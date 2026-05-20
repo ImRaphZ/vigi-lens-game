@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnk8u5ls3ojo6"]
+
+[ext_resource type="Texture2D" uid="uid://xqiacgxcuh88" path="res://assets/images/parte21.png" id="1_svqlk"]
+[ext_resource type="Texture2D" uid="uid://cij1d14howwnu" path="res://assets/images/parte20.png" id="2_c0y2p"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="3_c0y2p"]
+
+[node name="RanD" type="Node2D" unique_id=2067290288]
+
+[node name="Parte21" type="Sprite2D" parent="." unique_id=1558445789]
+position = Vector2(1714, 331)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_svqlk")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("3_c0y2p")]
+position = Vector2(1711, 505)
+newScene = "FinalHall"
+
+[node name="Parte20" type="Sprite2D" parent="." unique_id=1006260374]
+position = Vector2(585, 331)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_c0y2p")

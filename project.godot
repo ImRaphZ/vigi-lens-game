@@ -15,6 +15,11 @@ run/main_scene="uid://c4ch661rm71fq"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1155
+window/size/viewport_height=650
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

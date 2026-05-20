@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bv74d4gujuj17"]
+
+[ext_resource type="Texture2D" uid="uid://b2eopwu2o080j" path="res://assets/images/parte18.png" id="1_vbhw6"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_irwwv"]
+
+[node name="FinalHall" type="Node2D" unique_id=145231064]
+
+[node name="Parte18" type="Sprite2D" parent="." unique_id=415361283]
+position = Vector2(567, 327)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_vbhw6")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_irwwv")]
+position = Vector2(564, 419)
+direction = 2
+size = 0
+newScene = "PNE"
+
+[node name="Arrow2" parent="." unique_id=867274263 instance=ExtResource("2_irwwv")]
+position = Vector2(391, 408)
+direction = 3
+size = 0
+newScene = "Security"
+
+[node name="Arrow3" parent="." unique_id=1058599748 instance=ExtResource("2_irwwv")]
+position = Vector2(740, 407)
+direction = 1
+size = 0
+newScene = "RanD"
