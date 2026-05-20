@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cir6cgvcahmqg"]
+
+[ext_resource type="Texture2D" uid="uid://dnaftoqd4uh08" path="res://assets/images/parte1.png" id="1_8irn0"]
+[ext_resource type="Texture2D" uid="uid://dfx7u82snqf0l" path="res://assets/images/parte2.png" id="2_bmqoi"]
+[ext_resource type="Texture2D" uid="uid://dnls5lmuu1r2s" path="res://assets/images/parte3.png" id="3_y46fx"]
+[ext_resource type="Texture2D" uid="uid://j5d74txgxqi" path="res://assets/images/parte4.png" id="4_3deyn"]
+[ext_resource type="Texture2D" uid="uid://dokcvvwamgcow" path="res://assets/images/parte5.png" id="5_dytyt"]
+[ext_resource type="Texture2D" uid="uid://dikhcgobchwo1" path="res://assets/images/parte6.png" id="6_eldsf"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="7_bmqoi"]
+
+[node name="Introduction" type="Node2D" unique_id=180277859]
+
+[node name="Parte1" type="Sprite2D" parent="." unique_id=1788984288]
+position = Vector2(960, 544)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8irn0")
+
+[node name="Parte2" type="Sprite2D" parent="." unique_id=585901119]
+position = Vector2(2344, 741)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bmqoi")
+
+[node name="Parte3" type="Sprite2D" parent="." unique_id=2107715911]
+position = Vector2(977, 1415)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_y46fx")
+
+[node name="Parte4" type="Sprite2D" parent="." unique_id=1951083320]
+position = Vector2(2356, 1825)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_3deyn")
+
+[node name="Parte5" type="Sprite2D" parent="." unique_id=738107462]
+position = Vector2(942, 2424)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_dytyt")
+
+[node name="Parte6" type="Sprite2D" parent="." unique_id=1323901167]
+position = Vector2(2348, 2931)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_eldsf")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("7_bmqoi")]
+position = Vector2(2344, 3113)
+direction = 2
+size = 0
+newScene = "FrontDoor"
+
+[node name="Arrow2" parent="." unique_id=1234732135 instance=ExtResource("7_bmqoi")]
+position = Vector2(2186, 3079)
+direction = 3
+size = 0
+newScene = "Hallway"

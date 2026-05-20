@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://5lj2oe35cfhn"]
+
+[ext_resource type="Texture2D" uid="uid://4voraupis73l" path="res://assets/images/parte8.png" id="1_cy1oa"]
+[ext_resource type="Texture2D" uid="uid://b8mstqnthehn" path="res://assets/images/parte9.png" id="2_v0oia"]
+[ext_resource type="Texture2D" uid="uid://c4cov7c8kpitp" path="res://assets/images/parte10.png" id="3_voiwt"]
+[ext_resource type="Texture2D" uid="uid://dxnl2kjiq7w0k" path="res://assets/images/parte11.png" id="4_fpi2s"]
+[ext_resource type="Texture2D" uid="uid://bf47tnolywkev" path="res://assets/images/parte12.png" id="5_qjiac"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="6_v0oia"]
+
+[node name="Vents" type="Node2D" unique_id=899346641]
+
+[node name="Parte8" type="Sprite2D" parent="." unique_id=142440242]
+position = Vector2(556, 333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cy1oa")
+
+[node name="Parte9" type="Sprite2D" parent="." unique_id=365064726]
+position = Vector2(1986, 1090)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_v0oia")
+
+[node name="Parte10" type="Sprite2D" parent="." unique_id=258655186]
+position = Vector2(548, 1935)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_voiwt")
+
+[node name="Parte11" type="Sprite2D" parent="." unique_id=1664824385]
+position = Vector2(1935, 2731)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_fpi2s")
+
+[node name="Parte12" type="Sprite2D" parent="." unique_id=1952547984]
+position = Vector2(597, 3481)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_qjiac")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("6_v0oia")]
+position = Vector2(587, 3627)
+direction = 2
+newScene = "MainHall"

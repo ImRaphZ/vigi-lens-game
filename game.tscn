@@ -1,62 +1,103 @@
 [gd_scene format=3 uid="uid://c4ch661rm71fq"]
 
 [ext_resource type="Script" uid="uid://bcxjwfsdgdc0g" path="res://animation_player.gd" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://dnaftoqd4uh08" path="res://assets/images/parte1.png" id="3_feb5d"]
-[ext_resource type="Texture2D" uid="uid://dnls5lmuu1r2s" path="res://assets/images/parte3.png" id="4_7jktm"]
-[ext_resource type="Texture2D" uid="uid://dfx7u82snqf0l" path="res://assets/images/parte2.png" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="5_7jktm"]
+[ext_resource type="Script" uid="uid://xaillugquhnk" path="res://game.gd" id="1_ryrav"]
+[ext_resource type="PackedScene" uid="uid://cir6cgvcahmqg" path="res://Scenes/Panels/introduction.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://brbva18mfd6qg" path="res://Scenes/Panels/hallway.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://5lj2oe35cfhn" path="res://Scenes/Panels/vents.tscn" id="5_7jktm"]
 
 [sub_resource type="Animation" id="Animation_feb5d"]
 resource_name = "Comic"
 length = 12.0
 
+[sub_resource type="Animation" id="Animation_7jktm"]
+resource_name = "Introduction"
+length = 12.566667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Introduction:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3.5, 5, 6, 7.5, 8.5, 10.066667, 11, 12.5),
+"transitions": PackedFloat32Array(1, 2.2973945, 0.07432574, 2.3784142, 1, 2.0705302, 1, 1.6817936, 1, 2.5491211, 1),
+"update": 0,
+"values": [Vector2(-385, -230), Vector2(-385, -230), Vector2(-1786, -432), Vector2(-1786, -432), Vector2(-411, -1088), Vector2(-411, -1088), Vector2(-1786, -1513), Vector2(-1786, -1513), Vector2(-375, -2089), Vector2(-375, -2089), Vector2(-1796, -2608)]
+}
+
 [sub_resource type="Animation" id="Animation_fc0e3"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Introduction:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-385, -230)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vents:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18, -3)]
+}
+
+[sub_resource type="Animation" id="Animation_ryrav"]
+resource_name = "Vents"
+length = 9.566667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vents:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3.5, 5, 6, 7.5, 8.5, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(18, -3), Vector2(18, -3), Vector2(-1419, -758), Vector2(-1419, -758), Vector2(20, -1612), Vector2(20, -1612), Vector2(-1360, -2411), Vector2(-1360, -2411), Vector2(-17, -3157)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7jktm"]
 _data = {
 &"Comic": SubResource("Animation_feb5d"),
-&"RESET": SubResource("Animation_fc0e3")
+&"Introduction": SubResource("Animation_7jktm"),
+&"RESET": SubResource("Animation_fc0e3"),
+&"Vents": SubResource("Animation_ryrav")
 }
 
 [node name="Game" type="Node2D" unique_id=1346341802]
+script = ExtResource("1_ryrav")
+
+[node name="Background" type="ColorRect" parent="." unique_id=828926370]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.017732391, 0.017732391, 0.01773239, 0.6862745)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1655453861]
 libraries/ = SubResource("AnimationLibrary_7jktm")
 script = ExtResource("1_e2o6t")
 
-[node name="Parte1" type="Sprite2D" parent="." unique_id=1849971536]
-position = Vector2(576, 324)
-scale = Vector2(0.512963, 0.51296294)
-texture = ExtResource("3_feb5d")
+[node name="Introduction" parent="." unique_id=180277859 instance=ExtResource("3_feb5d")]
+visible = false
+position = Vector2(-385, -230)
 
-[node name="Parte2" type="Sprite2D" parent="." unique_id=1025086951]
-position = Vector2(1996, 324.00003)
-scale = Vector2(0.513, 0.513)
-texture = ExtResource("4_fc0e3")
+[node name="Hallway" parent="." unique_id=2062477771 instance=ExtResource("4_fc0e3")]
+visible = false
 
-[node name="Parte3" type="Sprite2D" parent="." unique_id=1771387611]
-position = Vector2(570, 1072)
-scale = Vector2(0.513, 0.513)
-texture = ExtResource("4_7jktm")
+[node name="Vents" parent="." unique_id=899346641 instance=ExtResource("5_7jktm")]
+visible = false
+position = Vector2(18, -3)
 
-[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("5_7jktm")]
-position = Vector2(993, 307)
-direction = 1
-size = 0
-newScene = "Right Small"
-
-[node name="Arrow2" parent="." unique_id=1506568758 instance=ExtResource("5_7jktm")]
-position = Vector2(574, 558)
-newScene = "Bottom Medium"
-
-[node name="Arrow3" parent="." unique_id=1944463554 instance=ExtResource("5_7jktm")]
-position = Vector2(138, 322)
-direction = 3
-newScene = "Left Medium"
-
-[node name="Arrow4" parent="." unique_id=27137777 instance=ExtResource("5_7jktm")]
-position = Vector2(572, 105)
-direction = 2
-size = 2
-newScene = "Top Large"
+[connection signal="ready" from="." to="." method="_on_ready"]

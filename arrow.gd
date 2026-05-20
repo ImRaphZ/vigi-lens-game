@@ -28,10 +28,9 @@ var currentDirection: Direction = Direction.BOTTOM;
 
 @export var newScene: String
 
-
 func _ready():
 	# Initialize rotation based on the selected direction
-	setaSprite.global_rotation = get_rotation_for_direction(direction)
+	self.rotation = get_rotation_for_direction(direction)
 	setaSprite.scale = get_size(size)
 	print(newScene)
 
@@ -62,6 +61,29 @@ func get_size(size: Size) -> Vector2:
 		_:
 			return Vector2(0.22, 0.22)
 
-func _on_button_pressed() -> void:
-	print("Button touched")
+func _on_button_pressed() -> void: 
+
+	var parent_found = false
+	var parent = get_parent()
+	# Checks if parent has method, if not, checks parent's parent || Comment of the year
+	while !parent_found:
+		if parent.has_method("changePanel"):
+			parent_found = true
+		else:
+			parent = parent.get_parent()
+			
+	parent.changePanel(newScene)
+	
+	print(newScene)
+
+
+
+
+func _on_button_mouse_entered() -> void:
+	$AnimationPlayer.play("arrow")
+	pass # Replace with function body.
+
+
+func _on_button_mouse_exited() -> void:
+	$AnimationPlayer.pause()
 	pass # Replace with function body.

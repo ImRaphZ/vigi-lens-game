@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brbva18mfd6qg"]
+
+[ext_resource type="Texture2D" uid="uid://b5yheemtw1356" path="res://assets/images/parte7.png" id="1_bmnfr"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_nn6vq"]
+
+[node name="Hallway" type="Node2D" unique_id=2062477771]
+
+[node name="Parte7" type="Sprite2D" parent="." unique_id=611432835]
+position = Vector2(554, 325)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_bmnfr")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_nn6vq")]
+position = Vector2(798, 234)
+direction = 1
+size = 0
+newScene = "Vents"
