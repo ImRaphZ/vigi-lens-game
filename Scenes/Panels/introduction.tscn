@@ -8,46 +8,176 @@
 [ext_resource type="Texture2D" uid="uid://dikhcgobchwo1" path="res://assets/images/parte6.png" id="6_eldsf"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="7_bmqoi"]
 
+[sub_resource type="Animation" id="Animation_bmqoi"]
+resource_name = "Introduction"
+length = 9.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Parte2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.03333334, 0.1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Parte3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06666667, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Parte4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.06666667, 5.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Parte5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 8.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_y46fx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Parte2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Parte3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Parte4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Parte5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y46fx"]
+_data = {
+&"Introduction": SubResource("Animation_bmqoi"),
+&"RESET": SubResource("Animation_y46fx")
+}
+
 [node name="Introduction" type="Node2D" unique_id=180277859]
 
-[node name="Parte1" type="Sprite2D" parent="." unique_id=1788984288]
-position = Vector2(960, 544)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_8irn0")
-
-[node name="Parte2" type="Sprite2D" parent="." unique_id=585901119]
-position = Vector2(2344, 741)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_bmqoi")
-
-[node name="Parte3" type="Sprite2D" parent="." unique_id=2107715911]
-position = Vector2(977, 1415)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_y46fx")
-
-[node name="Parte4" type="Sprite2D" parent="." unique_id=1951083320]
-position = Vector2(2356, 1825)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_3deyn")
-
-[node name="Parte5" type="Sprite2D" parent="." unique_id=738107462]
-position = Vector2(942, 2424)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_dytyt")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=118675237]
+libraries/ = SubResource("AnimationLibrary_y46fx")
 
 [node name="Parte6" type="Sprite2D" parent="." unique_id=1323901167]
-position = Vector2(2348, 2931)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("6_eldsf")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("7_bmqoi")]
-position = Vector2(2344, 3113)
+position = Vector2(-1, 229)
 direction = 2
 size = 0
 newScene = "FrontDoor"
 
 [node name="Arrow2" parent="." unique_id=1234732135 instance=ExtResource("7_bmqoi")]
-position = Vector2(2186, 3079)
+position = Vector2(-216, 200)
 direction = 3
 size = 0
 newScene = "Hallway"
+
+[node name="Parte5" type="Sprite2D" parent="." unique_id=738107462]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("5_dytyt")
+
+[node name="Parte4" type="Sprite2D" parent="." unique_id=1951083320]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("4_3deyn")
+
+[node name="Parte3" type="Sprite2D" parent="." unique_id=2107715911]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("3_y46fx")
+
+[node name="Parte2" type="Sprite2D" parent="." unique_id=585901119]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_bmqoi")
+
+[node name="Parte1" type="Sprite2D" parent="." unique_id=1788984288]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_8irn0")

@@ -7,17 +7,16 @@
 
 [node name="Parte14" type="Sprite2D" parent="." unique_id=813313606]
 position = Vector2(581, 332)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_2rawi")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("3_y11di")]
-position = Vector2(591, 429)
+position = Vector2(600, 462)
 direction = 2
 size = 0
-newScene = "BossCabinet"
+newScene = "Boss"
 
 [node name="Arrow2" parent="." unique_id=1210493854 instance=ExtResource("3_y11di")]
-position = Vector2(680, 352)
-direction = 1
+position = Vector2(600, 592)
 size = 0
-newScene = "FinalHall"
+newScene = "MainHall"
