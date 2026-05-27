@@ -7,9 +7,9 @@
 
 [node name="Parte19" type="Sprite2D" parent="." unique_id=950159417]
 position = Vector2(563, 339)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_tfad7")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_hw6jf")]
-position = Vector2(562, 508)
+position = Vector2(562, 576)
 newScene = "FinalHall"

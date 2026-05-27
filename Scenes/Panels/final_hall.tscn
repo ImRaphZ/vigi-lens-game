@@ -7,7 +7,7 @@
 
 [node name="Parte18" type="Sprite2D" parent="." unique_id=415361283]
 position = Vector2(567, 327)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_vbhw6")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_irwwv")]
@@ -17,13 +17,18 @@ size = 0
 newScene = "PNE"
 
 [node name="Arrow2" parent="." unique_id=867274263 instance=ExtResource("2_irwwv")]
-position = Vector2(391, 408)
+position = Vector2(344, 408)
 direction = 3
 size = 0
 newScene = "Security"
 
 [node name="Arrow3" parent="." unique_id=1058599748 instance=ExtResource("2_irwwv")]
-position = Vector2(740, 407)
+position = Vector2(776, 408)
 direction = 1
 size = 0
 newScene = "RanD"
+
+[node name="Arrow4" parent="." unique_id=1189181330 instance=ExtResource("2_irwwv")]
+position = Vector2(560, 592)
+size = 0
+newScene = "MainHall"
