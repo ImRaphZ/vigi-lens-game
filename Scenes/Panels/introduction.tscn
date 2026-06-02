@@ -154,7 +154,7 @@ texture = ExtResource("6_eldsf")
 position = Vector2(-1, 229)
 direction = 2
 size = 0
-newScene = "FrontDoor"
+newScene = "PNE"
 
 [node name="Arrow2" parent="." unique_id=1234732135 instance=ExtResource("7_bmqoi")]
 position = Vector2(-216, 200)

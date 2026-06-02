@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://dbvkvjfqnf28i"]
 
+[ext_resource type="Texture2D" uid="uid://bkm5um7cdj61" path="res://assets/images/parte22.png" id="1_dn136"]
+[ext_resource type="Texture2D" uid="uid://e0527kcjabb2" path="res://assets/images/parte23.png" id="2_ail21"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="4_3tjdf"]
+
 [node name="PNE" type="Node2D" unique_id=508816077]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=869239104]
+
+[node name="Parte23" type="Sprite2D" parent="." unique_id=53300039]
+position = Vector2(-3.0517578e-05, 0)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_ail21")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("4_3tjdf")]
+position = Vector2(168, 0)
+direction = 2
+
+[node name="Parte22" type="Sprite2D" parent="." unique_id=2020626493]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_dn136")

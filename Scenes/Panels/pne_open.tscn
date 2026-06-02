@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dgqqnlagju1u0"]
+
+[ext_resource type="Texture2D" uid="uid://wp436ogbh8yi" path="res://assets/images/parte25.png" id="1_qqscm"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_g5ndm"]
+
+[node name="PNE_Open" type="Node2D" unique_id=498127536]
+
+[node name="Parte25" type="Sprite2D" parent="." unique_id=2095504632]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_qqscm")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_g5ndm")]
+position = Vector2(-64, 88)
+direction = 2
+
+[node name="Arrow2" parent="." unique_id=1976984589 instance=ExtResource("2_g5ndm")]
+position = Vector2(-192, 304)
+size = 0

@@ -11,7 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bv74d4gujuj17" path="res://Scenes/Panels/final_hall.tscn" id="10_hve3p"]
 [ext_resource type="PackedScene" uid="uid://7cepolh72xl3" path="res://Scenes/Panels/security.tscn" id="11_iotsf"]
 [ext_resource type="PackedScene" uid="uid://cnk8u5ls3ojo6" path="res://Scenes/Panels/ran_d.tscn" id="12_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://dbvkvjfqnf28i" path="res://Scenes/Panels/pne.tscn" id="13_215e1"]
 [ext_resource type="PackedScene" uid="uid://diey2cn8xepwy" path="res://Scenes/Panels/second_hall_boss.tscn" id="13_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://dy1d61n3hp3p2" path="res://Scenes/Panels/pne_cabinet.tscn" id="14_215e1"]
 
 [node name="Game" type="Node2D" unique_id=1346341802]
 script = ExtResource("1_ryrav")
@@ -65,5 +67,13 @@ position = Vector2(78, 21)
 [node name="RanD" parent="." unique_id=2067290288 instance=ExtResource("12_lc2xo")]
 visible = false
 position = Vector2(640, 355)
+
+[node name="PNE" parent="." unique_id=508816077 instance=ExtResource("13_215e1")]
+visible = false
+position = Vector2(641, 360)
+
+[node name="PNE_Cabinet" parent="." unique_id=100288973 instance=ExtResource("14_215e1")]
+visible = false
+position = Vector2(640, 360)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

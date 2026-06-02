@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://biwoe4f4dse3l"]
+
+[ext_resource type="Script" uid="uid://c84krtjp3t2k2" path="res://Scenes/button.gd" id="1_1cmwl"]
+
+[node name="Button" type="Node2D" unique_id=1562793998]
+script = ExtResource("1_1cmwl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=726105136]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_default_cursor_shape = 2
+color = Color(0, 0, 0, 0.023529412)
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=1997448680]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+
+[connection signal="button_down" from="ColorRect/Button" to="." method="_on_button_down"]

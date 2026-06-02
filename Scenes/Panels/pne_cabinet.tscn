@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dy1d61n3hp3p2"]
+
+[ext_resource type="Script" uid="uid://blxeesahatsfg" path="res://Scenes/Panels/pne_cabinet.gd" id="1_tfxgv"]
+[ext_resource type="Texture2D" uid="uid://b1yjm35nb8g8m" path="res://assets/images/parte24.1.png" id="2_s7jfy"]
+[ext_resource type="Texture2D" uid="uid://cf3xdjbqujqt1" path="res://assets/images/parte24.png" id="3_je8ln"]
+[ext_resource type="PackedScene" uid="uid://biwoe4f4dse3l" path="res://Scenes/button.tscn" id="4_7peri"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="5_s7jfy"]
+
+[node name="PNE_Cabinet" type="Node2D" unique_id=100288973]
+script = ExtResource("1_tfxgv")
+
+[node name="Parte24_1" type="Sprite2D" parent="." unique_id=873080043]
+position = Vector2(-0.00012207031, 0)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_s7jfy")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("5_s7jfy")]
+position = Vector2(-312, 120)
+direction = 2
+size = 2
+
+[node name="Parte24" type="Sprite2D" parent="." unique_id=821338612]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("3_je8ln")
+
+[node name="Button" parent="." unique_id=1562793998 node_paths=PackedStringArray("exec_obj") instance=ExtResource("4_7peri")]
+position = Vector2(232, 136)
+exec_obj = NodePath("..")
+exec_func = "start_switch"
