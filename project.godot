@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Vigi-Lens"
-run/main_scene="uid://c4ch661rm71fq"
+run/main_scene="uid://bt3g6f1mnh686"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
