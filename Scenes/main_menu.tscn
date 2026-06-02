@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dycqcbicqoyp8" path="res://Scenes/main_menu.gd" id="1_48xlc"]
 [ext_resource type="Texture2D" uid="uid://j5d74txgxqi" path="res://assets/images/parte4.png" id="2_1ehe0"]
+[ext_resource type="FontFile" uid="uid://l2mgqextdlke" path="res://assets/fonts/genau-font.otf" id="3_1ehe0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5prvo"]
 
@@ -36,47 +37,49 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0, 0, 0, 0.7607843)
 
-[node name="Loading" type="Label" parent="." unique_id=1932378611]
-visible = false
-offset_left = 526.2222
-offset_top = 319.0
-offset_right = 753.7778
-offset_bottom = 401.0
-theme_override_font_sizes/font_size = 32
-text = "LOADING...."
-horizontal_alignment = 1
+[node name="Demo" type="Label" parent="." unique_id=1932378611]
+offset_left = 864.0
+offset_top = 684.0
+offset_right = 1275.0
+offset_bottom = 720.0
+theme_override_font_sizes/font_size = 18
+text = "This game is a demo, not everything is finished!"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="Title" type="Label" parent="." unique_id=703480094]
-offset_left = 363.0
-offset_top = 118.0
-offset_right = 917.0
-offset_bottom = 206.0
+offset_left = 16.0
+offset_top = 295.0
+offset_right = 482.0
+offset_bottom = 383.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1ehe0")
 theme_override_font_sizes/font_size = 64
-text = "VIgi-Lens (DEMO)"
+text = "VIGILENS"
 horizontal_alignment = 1
 
 [node name="PlayButton" type="Button" parent="." unique_id=1722741324]
-offset_left = 542.0
-offset_top = 334.0
-offset_right = 738.0
-offset_bottom = 387.0
+offset_left = 74.0
+offset_top = 440.0
+offset_right = 190.0
+offset_bottom = 507.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5prvo")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c607f")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_mr1du")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_gj1a6")
 theme_override_styles/focus = SubResource("StyleBoxTexture_a5hiv")
 text = "Play"
+alignment = 0
 
 [node name="ExitButton" type="Button" parent="." unique_id=1549136905]
-offset_left = 542.0
-offset_top = 422.0
-offset_right = 738.0
-offset_bottom = 475.0
-theme_override_font_sizes/font_size = 32
+offset_left = 74.0
+offset_top = 528.0
+offset_right = 177.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8pvmb")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_j0uxp")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_rbb4s")
@@ -84,6 +87,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_7esyo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yo7n3")
 text = "Exit
 "
+alignment = 0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
