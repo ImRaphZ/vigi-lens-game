@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dbvkvjfqnf28i" path="res://Scenes/Panels/pne.tscn" id="13_215e1"]
 [ext_resource type="PackedScene" uid="uid://diey2cn8xepwy" path="res://Scenes/Panels/second_hall_boss.tscn" id="13_lc2xo"]
 [ext_resource type="PackedScene" uid="uid://dy1d61n3hp3p2" path="res://Scenes/Panels/pne_cabinet.tscn" id="14_215e1"]
+[ext_resource type="PackedScene" uid="uid://dgqqnlagju1u0" path="res://Scenes/Panels/pne_open.tscn" id="15_80cx4"]
+[ext_resource type="PackedScene" uid="uid://bsku244oe2snh" path="res://Scenes/Panels/hideout.tscn" id="16_e8heu"]
 
 [node name="Game" type="Node2D" unique_id=1346341802]
 script = ExtResource("1_ryrav")
@@ -50,7 +52,7 @@ position = Vector2(59, 26)
 
 [node name="Boss" parent="." unique_id=661360774 instance=ExtResource("7_eow3j")]
 visible = false
-position = Vector2(65, 34)
+position = Vector2(-2, 2)
 
 [node name="BossCabinet" parent="." unique_id=1912630456 instance=ExtResource("9_vef74")]
 visible = false
@@ -75,5 +77,13 @@ position = Vector2(641, 360)
 [node name="PNE_Cabinet" parent="." unique_id=100288973 instance=ExtResource("14_215e1")]
 visible = false
 position = Vector2(640, 360)
+
+[node name="PNE_Open" parent="." unique_id=498127536 instance=ExtResource("15_80cx4")]
+visible = false
+position = Vector2(639, 364)
+
+[node name="Hideout" parent="." unique_id=1783563376 instance=ExtResource("16_e8heu")]
+visible = false
+position = Vector2(-1, 1)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

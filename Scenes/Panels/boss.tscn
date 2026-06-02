@@ -4,19 +4,58 @@
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_0ifir"]
 [ext_resource type="Texture2D" uid="uid://bh6vtnaj0g1a6" path="res://assets/images/parte16.png" id="2_8jg7w"]
 
+[sub_resource type="Animation" id="Animation_0ifir"]
+resource_name = "Boss"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte15:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1.5333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_8jg7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte15:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tlntr"]
+_data = {
+&"Boss": SubResource("Animation_0ifir"),
+&"RESET": SubResource("Animation_8jg7w")
+}
+
 [node name="Boss" type="Node2D" unique_id=661360774]
 
-[node name="Parte15" type="Sprite2D" parent="." unique_id=28714930]
-position = Vector2(575, 324)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_0ifir")
-
 [node name="Parte16" type="Sprite2D" parent="." unique_id=527550653]
-position = Vector2(575, 1042)
-scale = Vector2(0.5, 0.5)
+position = Vector2(640, 358)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("2_8jg7w")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_0ifir")]
-position = Vector2(799, 1255)
-direction = 2
+position = Vector2(854, 311)
 newScene = "BossCabinet"
+
+[node name="Parte15" type="Sprite2D" parent="." unique_id=28714930]
+position = Vector2(640.77783, 359.5)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_0ifir")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1931638275]
+libraries/ = SubResource("AnimationLibrary_tlntr")

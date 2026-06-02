@@ -18,6 +18,7 @@ texture = ExtResource("2_s7jfy")
 position = Vector2(-312, 120)
 direction = 2
 size = 2
+newScene = "PNE_Open"
 
 [node name="Parte24" type="Sprite2D" parent="." unique_id=821338612]
 position = Vector2(0, -4.7683716e-07)

@@ -6,6 +6,7 @@
 script = ExtResource("1_1cmwl")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=726105136]
+modulate = Color(1, 1, 1, 0)
 offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0

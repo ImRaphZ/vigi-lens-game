@@ -12,7 +12,9 @@ texture = ExtResource("1_qqscm")
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_g5ndm")]
 position = Vector2(-64, 88)
 direction = 2
+newScene = "Hideout"
 
 [node name="Arrow2" parent="." unique_id=1976984589 instance=ExtResource("2_g5ndm")]
 position = Vector2(-192, 304)
 size = 0
+newScene = "MainHall"

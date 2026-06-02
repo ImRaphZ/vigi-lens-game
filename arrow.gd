@@ -77,8 +77,6 @@ func _on_button_pressed() -> void:
 	print(newScene)
 
 
-
-
 func _on_button_mouse_entered() -> void:
 	$AnimationPlayer.play("arrow")
 	pass # Replace with function body.

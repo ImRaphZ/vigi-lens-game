@@ -6,11 +6,10 @@
 [node name="BossCabinet" type="Node2D" unique_id=1912630456]
 
 [node name="Parte17" type="Sprite2D" parent="." unique_id=339810976]
-position = Vector2(575, 326)
-scale = Vector2(0.5, 0.5)
+position = Vector2(639, 360)
+scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_tmkxn")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_0ifir")]
-position = Vector2(283, 538)
-size = 0
-newScene = "SecondHall"
+position = Vector2(277, 651)
+newScene = "SecondHallBoss"

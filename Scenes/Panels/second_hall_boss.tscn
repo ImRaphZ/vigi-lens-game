@@ -14,7 +14,7 @@ texture = ExtResource("1_l7vgb")
 position = Vector2(600, 462)
 direction = 2
 size = 0
-newScene = "Boss"
+newScene = "BossCabinet"
 
 [node name="Arrow2" parent="." unique_id=1064073015 instance=ExtResource("2_ul2kr")]
 position = Vector2(600, 592)

@@ -4,9 +4,47 @@
 [ext_resource type="Texture2D" uid="uid://e0527kcjabb2" path="res://assets/images/parte23.png" id="2_ail21"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="4_3tjdf"]
 
+[sub_resource type="Animation" id="Animation_ail21"]
+resource_name = "PNE"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte22:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3tjdf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Parte22:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3qm1"]
+_data = {
+&"PNE": SubResource("Animation_ail21"),
+&"RESET": SubResource("Animation_3tjdf")
+}
+
 [node name="PNE" type="Node2D" unique_id=508816077]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=869239104]
+libraries/ = SubResource("AnimationLibrary_p3qm1")
 
 [node name="Parte23" type="Sprite2D" parent="." unique_id=53300039]
 position = Vector2(-3.0517578e-05, 0)
@@ -16,6 +54,7 @@ texture = ExtResource("2_ail21")
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("4_3tjdf")]
 position = Vector2(168, 0)
 direction = 2
+newScene = "PNE_Cabinet"
 
 [node name="Parte22" type="Sprite2D" parent="." unique_id=2020626493]
 scale = Vector2(0.67, 0.67)
