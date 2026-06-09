@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwb8yuwefsbod"
+path="res://.godot/imported/ultima fala antes dos finais.mp3-ec7febb6c6b26401c6ebb8b44544a25b.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/ultima fala antes dos finais.mp3"
+dest_files=["res://.godot/imported/ultima fala antes dos finais.mp3-ec7febb6c6b26401c6ebb8b44544a25b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

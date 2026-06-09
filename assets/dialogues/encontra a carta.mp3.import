@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkxon8vo6q0x8"
+path="res://.godot/imported/encontra a carta.mp3-8bb995bbe548366acb090b3bbcbb93c2.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/encontra a carta.mp3"
+dest_files=["res://.godot/imported/encontra a carta.mp3-8bb995bbe548366acb090b3bbcbb93c2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://20imjrqdc1k8"
+path="res://.godot/imported/som de metal.mp3-008c3f350ba12ba30a5845cf309764df.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds2/som de metal.mp3"
+dest_files=["res://.godot/imported/som de metal.mp3-008c3f350ba12ba30a5845cf309764df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

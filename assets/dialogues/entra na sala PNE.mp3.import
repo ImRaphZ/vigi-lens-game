@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4ljyq21kvxyw"
+path="res://.godot/imported/entra na sala PNE.mp3-5143266e33f90d95bb36ef514c845f19.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/entra na sala PNE.mp3"
+dest_files=["res://.godot/imported/entra na sala PNE.mp3-5143266e33f90d95bb36ef514c845f19.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

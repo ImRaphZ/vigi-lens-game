@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmu000f6g1ykr"
+path="res://.godot/imported/computador central.mp3-4f205bb872f8747f9648952ba5135af9.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/computador central.mp3"
+dest_files=["res://.godot/imported/computador central.mp3-4f205bb872f8747f9648952ba5135af9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

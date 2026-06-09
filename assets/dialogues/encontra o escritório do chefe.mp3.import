@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r54di80ln0xx"
+path="res://.godot/imported/encontra o escritório do chefe.mp3-18dae0c71e7d6b0fe5ad995a26daccda.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/encontra o escritório do chefe.mp3"
+dest_files=["res://.godot/imported/encontra o escritório do chefe.mp3-18dae0c71e7d6b0fe5ad995a26daccda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

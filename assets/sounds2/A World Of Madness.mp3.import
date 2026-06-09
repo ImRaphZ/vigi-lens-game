@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnbavx4v633nq"
+path="res://.godot/imported/A World Of Madness.mp3-f6703f0e2581b8aa1a32ec388b7333ab.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds2/A World Of Madness.mp3"
+dest_files=["res://.godot/imported/A World Of Madness.mp3-f6703f0e2581b8aa1a32ec388b7333ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

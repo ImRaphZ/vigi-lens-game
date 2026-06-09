@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy7xxp4utqipx"
+path="res://.godot/imported/encontra um duto de ventilação.mp3-e7c9d4691410e023f15905a5e24b7820.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/encontra um duto de ventilação.mp3"
+dest_files=["res://.godot/imported/encontra um duto de ventilação.mp3-e7c9d4691410e023f15905a5e24b7820.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

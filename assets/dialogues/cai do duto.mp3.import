@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1nuqr8xa2xul"
+path="res://.godot/imported/cai do duto.mp3-0bfcf0ee0d0b62a7963ff2d397d2ce86.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/cai do duto.mp3"
+dest_files=["res://.godot/imported/cai do duto.mp3-0bfcf0ee0d0b62a7963ff2d397d2ce86.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

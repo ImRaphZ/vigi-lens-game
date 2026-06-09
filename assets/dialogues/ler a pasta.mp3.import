@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4bcwlm0he6g8"
+path="res://.godot/imported/ler a pasta.mp3-30953dc18cd692b22b300ba176b03f96.mp3str"
+
+[deps]
+
+source_file="res://assets/dialogues/ler a pasta.mp3"
+dest_files=["res://.godot/imported/ler a pasta.mp3-30953dc18cd692b22b300ba176b03f96.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

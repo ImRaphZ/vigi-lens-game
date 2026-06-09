@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbqajl6p5hmyf"
+path="res://.godot/imported/porta de carro.mp3-db3be0db674c1bee051389caecf418b5.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds2/porta de carro.mp3"
+dest_files=["res://.godot/imported/porta de carro.mp3-db3be0db674c1bee051389caecf418b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
