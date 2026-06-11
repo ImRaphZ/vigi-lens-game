@@ -6,7 +6,6 @@ func _on_play_button_pressed() -> void:
 	$Title.visible = false
 	$PlayButton.visible = false
 	$ExitButton.visible = false
-	$Loading.visible = true
 	get_tree().change_scene_to_file("res://game.tscn")
 
 

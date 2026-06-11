@@ -6,8 +6,6 @@ var current_panel = "Introduction"
 
 func _on_ready() -> void:
 	introduction.show()
-	introduction.get_node("AnimationPlayer").play("Introduction")
-
 
 func changePanel(new_panel: String) -> void:
 	#print("CHANGE PANEL: " + new_panel)
