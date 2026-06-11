@@ -1,143 +1,8 @@
 [gd_scene format=3 uid="uid://bsku244oe2snh"]
 
-[ext_resource type="Texture2D" uid="uid://jo8eolkvphal" path="res://assets/images/parte30.png" id="1_py7di"]
-[ext_resource type="Texture2D" uid="uid://bo8eau1ih81y7" path="res://assets/images/parte29.png" id="2_t83hp"]
-[ext_resource type="Texture2D" uid="uid://0gnfr0npe8kl" path="res://assets/images/parte28.png" id="3_c0yid"]
-[ext_resource type="Texture2D" uid="uid://c4n5jnurly1ye" path="res://assets/images/parte27.png" id="4_jfso2"]
-[ext_resource type="Texture2D" uid="uid://cq8q10700ctyv" path="res://assets/images/parte26.png" id="5_tiqo6"]
-
-[sub_resource type="Animation" id="Animation_py7di"]
-resource_name = "Hideout"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parte26:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Parte27:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Parte28:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 4.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Parte29:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Parte30:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 7.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_t83hp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parte26:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Parte27:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Parte28:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Parte29:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Parte30:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_c0yid"]
-_data = {
-&"Hideout": SubResource("Animation_py7di"),
-&"RESET": SubResource("Animation_t83hp")
-}
+[ext_resource type="FontFile" uid="uid://bm5wjwm0hvfbs" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="1_8ro5c"]
+[ext_resource type="VideoStream" uid="uid://cdmp7iow05fij" path="res://assets/cutscenes/pne.ogv" id="2_cxjxm"]
+[ext_resource type="Script" uid="uid://bpsfrm64noe40" path="res://Scenes/Panels/video_controller.gd" id="3_cxjxm"]
 
 [node name="Hideout" type="Node2D" unique_id=1783563376]
 
@@ -148,48 +13,40 @@ offset_right = 1330.0
 offset_bottom = 746.0
 color = Color(0.09998604, 0.09998598, 0.099985994, 1)
 
-[node name="Button2" type="Button" parent="." unique_id=1990697114]
-offset_left = 825.0
+[node name="Button3" type="Button" parent="." unique_id=1293222306]
+offset_left = 497.0
 offset_top = 503.0
-offset_right = 1077.5
+offset_right = 779.275
+offset_bottom = 604.0
+theme_override_fonts/font = ExtResource("1_8ro5c")
+theme_override_font_sizes/font_size = 36
+text = "Esconder"
+
+[node name="Button2" type="Button" parent="." unique_id=1990697114]
+offset_left = 867.0
+offset_top = 503.0
+offset_right = 1119.5
 offset_bottom = 604.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8ro5c")
 theme_override_font_sizes/font_size = 36
 text = "Fugir"
 
 [node name="Button" type="Button" parent="." unique_id=1457371410]
-offset_left = 166.0
+offset_left = 141.0
 offset_top = 503.0
-offset_right = 418.5
+offset_right = 393.5
 offset_bottom = 604.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8ro5c")
 theme_override_font_sizes/font_size = 36
 text = "Confrontar"
 
-[node name="Parte30" type="Sprite2D" parent="." unique_id=1334795404]
-position = Vector2(641, 359.99997)
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("1_py7di")
+[node name="Cutscene" type="VideoStreamPlayer" parent="." unique_id=1950893125]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_cxjxm")
+volume_db = -20.0
+script = ExtResource("3_cxjxm")
 
-[node name="Parte29" type="Sprite2D" parent="." unique_id=1216399388]
-position = Vector2(641, 360)
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("2_t83hp")
-
-[node name="Parte28" type="Sprite2D" parent="." unique_id=609497699]
-position = Vector2(641, 360)
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("3_c0yid")
-
-[node name="Parte27" type="Sprite2D" parent="." unique_id=625071841]
-position = Vector2(641, 359)
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("4_jfso2")
-
-[node name="Parte26" type="Sprite2D" parent="." unique_id=1764747115]
-position = Vector2(641, 359.00003)
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("5_tiqo6")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=854584898]
-libraries/ = SubResource("AnimationLibrary_c0yid")
+[connection signal="finished" from="Cutscene" to="Cutscene" method="_on_finished"]

@@ -2,15 +2,26 @@
 
 [ext_resource type="Texture2D" uid="uid://b5yheemtw1356" path="res://assets/images/parte7.png" id="1_bmnfr"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_nn6vq"]
+[ext_resource type="AudioStream" uid="uid://dy7xxp4utqipx" path="res://assets/dialogues/encontra um duto de ventilação.mp3" id="3_jcm13"]
+[ext_resource type="Script" uid="uid://io0hph1marh5" path="res://Scenes/Panels/audio.gd" id="4_d0ioi"]
 
 [node name="Hallway" type="Node2D" unique_id=2062477771]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=381814969 node_paths=PackedStringArray("arrow")]
+position = Vector2(-1347, 240)
+stream = ExtResource("3_jcm13")
+script = ExtResource("4_d0ioi")
+arrow = NodePath("../Arrow")
 
 [node name="Parte7" type="Sprite2D" parent="." unique_id=611432835]
 scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_bmnfr")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_nn6vq")]
+visible = false
 position = Vector2(328, -120)
 direction = 1
 size = 0
 newScene = "Vents"
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]

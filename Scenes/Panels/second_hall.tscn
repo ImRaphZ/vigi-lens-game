@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://dgpqgrxao422o"]
 
 [ext_resource type="Texture2D" uid="uid://tmfm4jw5fnqw" path="res://assets/images/parte14.png" id="1_2rawi"]
+[ext_resource type="Script" uid="uid://c0ijpwx7l8f54" path="res://Scenes/Panels/second_hall.gd" id="1_a8bxs"]
+[ext_resource type="AudioStream" uid="uid://r54di80ln0xx" path="res://assets/dialogues/encontra o escritório do chefe.mp3" id="3_2rawi"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="3_y11di"]
 
 [node name="SecondHall" type="Node2D" unique_id=1034500612]
+script = ExtResource("1_a8bxs")
 
 [node name="Parte14" type="Sprite2D" parent="." unique_id=813313606]
 position = Vector2(581, 332)
@@ -20,3 +23,7 @@ newScene = "Boss"
 position = Vector2(600, 592)
 size = 0
 newScene = "MainHall"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1889191751]
+stream = ExtResource("3_2rawi")
+volume_db = -20.0

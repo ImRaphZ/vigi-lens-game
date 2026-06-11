@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ditmd43v5h55v"]
+
+[ext_resource type="Texture2D" uid="uid://het0t2wd7j0g" path="res://assets/images/parte7.1.png" id="1_y45ko"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_oupwh"]
+
+[node name="RightSide" type="Node2D" unique_id=553699567]
+
+[node name="Parte7_1" type="Sprite2D" parent="." unique_id=903850780]
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_y45ko")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_oupwh")]
+position = Vector2(-250, -35)
+direction = 3
+newScene = "CentralLab"

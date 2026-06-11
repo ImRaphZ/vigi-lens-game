@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cir6cgvcahmqg" path="res://Scenes/Panels/introduction.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://brbva18mfd6qg" path="res://Scenes/Panels/hallway.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://5lj2oe35cfhn" path="res://Scenes/Panels/vents.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://ditmd43v5h55v" path="res://Scenes/Panels/right_side.tscn" id="5_rvswv"]
+[ext_resource type="PackedScene" uid="uid://citrfd5c36o4m" path="res://Scenes/Panels/central_lab.tscn" id="6_boyg6"]
 [ext_resource type="PackedScene" uid="uid://b51oghknafeqj" path="res://Scenes/Panels/main_hall.tscn" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://ca4yjrknka0gv" path="res://Scenes/Panels/boss.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://dgpqgrxao422o" path="res://Scenes/Panels/second_hall.tscn" id="7_j5wjh"]
@@ -38,9 +40,17 @@ position = Vector2(640, 358)
 visible = false
 position = Vector2(641, 359)
 
+[node name="RightSide" parent="." unique_id=553699567 instance=ExtResource("5_rvswv")]
+visible = false
+position = Vector2(639, 360)
+
+[node name="CentralLab" parent="." unique_id=583617115 instance=ExtResource("6_boyg6")]
+visible = false
+position = Vector2(-1, 0)
+
 [node name="MainHall" parent="." unique_id=1034500612 instance=ExtResource("6_ryrav")]
 visible = false
-position = Vector2(640, 355)
+position = Vector2(640, 359)
 
 [node name="SecondHall" parent="." unique_id=2065551815 instance=ExtResource("7_j5wjh")]
 visible = false
@@ -68,7 +78,7 @@ position = Vector2(78, 21)
 
 [node name="RanD" parent="." unique_id=2067290288 instance=ExtResource("12_lc2xo")]
 visible = false
-position = Vector2(640, 355)
+position = Vector2(640, 359)
 
 [node name="PNE" parent="." unique_id=508816077 instance=ExtResource("13_215e1")]
 visible = false

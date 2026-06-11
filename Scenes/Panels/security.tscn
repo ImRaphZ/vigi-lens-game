@@ -1,15 +1,43 @@
 [gd_scene format=3 uid="uid://7cepolh72xl3"]
 
+[ext_resource type="Script" uid="uid://dwja2jahx7q68" path="res://Scenes/Panels/security.gd" id="1_46nmu"]
 [ext_resource type="Texture2D" uid="uid://dtq7skreodbu7" path="res://assets/images/parte19.png" id="1_tfad7"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="2_hw6jf"]
+[ext_resource type="Texture2D" uid="uid://jwqq435p0qd8" path="res://assets/images/parte19.1.png" id="3_apfoc"]
+[ext_resource type="PackedScene" uid="uid://biwoe4f4dse3l" path="res://Scenes/button.tscn" id="4_ohddm"]
+[ext_resource type="AudioStream" uid="uid://bgknm7v03eof2" path="res://assets/dialogues/desativar as câmeras de segurança.mp3" id="5_ohddm"]
+[ext_resource type="Script" uid="uid://io0hph1marh5" path="res://Scenes/Panels/audio.gd" id="6_mrxt6"]
 
-[node name="Security" type="Node2D" unique_id=1326719708]
+[node name="Security" type="Node2D" unique_id=1326719708 node_paths=PackedStringArray("arrow", "dialogue", "btn", "panel")]
+script = ExtResource("1_46nmu")
+arrow = NodePath("Arrow")
+dialogue = NodePath("Dialogue")
+btn = NodePath("Button")
+panel = NodePath("Parte19_1")
 
 [node name="Parte19" type="Sprite2D" parent="." unique_id=950159417]
 position = Vector2(563, 339)
 scale = Vector2(0.67, 0.67)
 texture = ExtResource("1_tfad7")
 
+[node name="Parte19_1" type="Sprite2D" parent="." unique_id=369521585]
+position = Vector2(563, 339)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("3_apfoc")
+
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("2_hw6jf")]
 position = Vector2(562, 576)
 newScene = "FinalHall"
+
+[node name="Button" parent="." unique_id=1562793998 node_paths=PackedStringArray("exec_obj") instance=ExtResource("4_ohddm")]
+position = Vector2(897, 514)
+exec_obj = NodePath("..")
+exec_func = "buttonPressed"
+
+[node name="Dialogue" type="AudioStreamPlayer2D" parent="." unique_id=1283586265 node_paths=PackedStringArray("arrow")]
+stream = ExtResource("5_ohddm")
+volume_db = -11.06
+script = ExtResource("6_mrxt6")
+arrow = NodePath("../Arrow")
+
+[connection signal="finished" from="Dialogue" to="Dialogue" method="_on_finished"]

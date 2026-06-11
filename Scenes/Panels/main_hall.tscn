@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b51oghknafeqj"]
 
 [ext_resource type="Texture2D" uid="uid://2o4s5ugm4yox" path="res://assets/images/parte13.png" id="2_ey4mw"]
+[ext_resource type="Script" uid="uid://clrh166jwbg7b" path="res://Scenes/arrow2.gd" id="3_j7je2"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="3_vwtkm"]
 
 [node name="MainHall" type="Node2D" unique_id=1034500612]
@@ -11,6 +12,7 @@ texture = ExtResource("2_ey4mw")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("3_vwtkm")]
 position = Vector2(-402, -16)
+script = ExtResource("3_j7je2")
 direction = 3
 newScene = "SecondHall"
 

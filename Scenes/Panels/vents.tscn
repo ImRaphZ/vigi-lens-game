@@ -1,125 +1,11 @@
 [gd_scene format=3 uid="uid://5lj2oe35cfhn"]
 
-[ext_resource type="Texture2D" uid="uid://4voraupis73l" path="res://assets/images/parte8.png" id="1_cy1oa"]
-[ext_resource type="Texture2D" uid="uid://b8mstqnthehn" path="res://assets/images/parte9.png" id="2_v0oia"]
-[ext_resource type="Texture2D" uid="uid://c4cov7c8kpitp" path="res://assets/images/parte10.png" id="3_voiwt"]
-[ext_resource type="Texture2D" uid="uid://dxnl2kjiq7w0k" path="res://assets/images/parte11.png" id="4_fpi2s"]
 [ext_resource type="Texture2D" uid="uid://bf47tnolywkev" path="res://assets/images/parte12.png" id="5_qjiac"]
 [ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="6_v0oia"]
-
-[sub_resource type="Animation" id="Animation_voiwt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parte8:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Parte9:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Parte10:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Parte11:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_v0oia"]
-resource_name = "Vents"
-length = 6.266667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Parte8:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Parte9:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.16666667, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Parte10:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.033333335, 4.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Parte11:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.06666667, 6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_voiwt"]
-_data = {
-&"RESET": SubResource("Animation_voiwt"),
-&"Vents": SubResource("Animation_v0oia")
-}
+[ext_resource type="VideoStream" uid="uid://bgkasnf173x1p" path="res://assets/cutscenes/vents.ogv" id="7_voiwt"]
+[ext_resource type="Script" uid="uid://bpsfrm64noe40" path="res://Scenes/Panels/video_controller.gd" id="8_fpi2s"]
 
 [node name="Vents" type="Node2D" unique_id=899346641]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=27339030]
-libraries/ = SubResource("AnimationLibrary_voiwt")
 
 [node name="Parte12" type="Sprite2D" parent="." unique_id=1952547984]
 scale = Vector2(0.67, 0.67)
@@ -130,18 +16,13 @@ position = Vector2(0, 176)
 direction = 2
 newScene = "MainHall"
 
-[node name="Parte11" type="Sprite2D" parent="." unique_id=1664824385]
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("4_fpi2s")
+[node name="Cutscene" type="VideoStreamPlayer" parent="." unique_id=1148172107]
+offset_left = -640.0
+offset_top = -359.0
+offset_right = 640.0
+offset_bottom = 361.0
+stream = ExtResource("7_voiwt")
+volume_db = -20.0
+script = ExtResource("8_fpi2s")
 
-[node name="Parte10" type="Sprite2D" parent="." unique_id=258655186]
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("3_voiwt")
-
-[node name="Parte9" type="Sprite2D" parent="." unique_id=365064726]
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("2_v0oia")
-
-[node name="Parte8" type="Sprite2D" parent="." unique_id=142440242]
-scale = Vector2(0.67, 0.67)
-texture = ExtResource("1_cy1oa")
+[connection signal="finished" from="Cutscene" to="Cutscene" method="_on_finished"]

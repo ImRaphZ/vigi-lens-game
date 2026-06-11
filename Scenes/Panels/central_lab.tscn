@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://citrfd5c36o4m"]
+
+[ext_resource type="Texture2D" uid="uid://ds42ekvke4jr8" path="res://assets/images/parte12.1.png" id="1_717a7"]
+[ext_resource type="VideoStream" uid="uid://diwqm6evp12pw" path="res://assets/cutscenes/centralLab.ogv" id="2_tniac"]
+[ext_resource type="PackedScene" uid="uid://bxcki5warki2j" path="res://Scenes/arrow.tscn" id="3_2qw40"]
+[ext_resource type="Script" uid="uid://bpsfrm64noe40" path="res://Scenes/Panels/video_controller.gd" id="4_tniac"]
+
+[node name="CentralLab" type="Node2D" unique_id=583617115]
+
+[node name="Parte12_1" type="Sprite2D" parent="." unique_id=786592157]
+position = Vector2(640, 360)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_717a7")
+
+[node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("3_2qw40")]
+position = Vector2(639, 467)
+direction = 2
+newScene = "MainHall"
+
+[node name="Cutscene" type="VideoStreamPlayer" parent="." unique_id=1529822648]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_tniac")
+volume_db = -20.0
+script = ExtResource("4_tniac")
+
+[connection signal="finished" from="Cutscene" to="Cutscene" method="_on_finished"]

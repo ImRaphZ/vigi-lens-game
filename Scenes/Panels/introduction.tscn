@@ -17,10 +17,10 @@ scale = Vector2(0.67, 0.67)
 texture = ExtResource("6_eldsf")
 
 [node name="Arrow" parent="." unique_id=813468880 instance=ExtResource("7_bmqoi")]
-position = Vector2(-1, 229)
-direction = 2
+position = Vector2(216, 200)
+direction = 1
 size = 0
-newScene = "PNE"
+newScene = "RightSide"
 
 [node name="Arrow2" parent="." unique_id=1234732135 instance=ExtResource("7_bmqoi")]
 position = Vector2(-216, 200)
@@ -59,7 +59,7 @@ offset_top = -359.0
 offset_right = 639.0
 offset_bottom = 361.0
 stream = ExtResource("8_y46fx")
-volume_db = -8.21
+volume_db = -20.0
 autoplay = true
 script = ExtResource("9_3deyn")
 
